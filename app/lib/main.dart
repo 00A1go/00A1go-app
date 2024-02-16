@@ -1,36 +1,23 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(App());
+  runApp(const App());
 }
 
-class App extends StatelessWidget {
+class App extends StatefulWidget {
+  const App({super.key});
+
+  @override
+  State<App> createState() => _AppState();
+}
+
+class _AppState extends State<App> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.black,
-        body: Column(children: [
-          SizedBox(
-            height: 40,
-          ),
-          Row(
-            children: [
-              Column(
-                children: [
-                  Text(
-                    "Hello",
-                    style: TextStyle(color: Colors.white),
-                  ),
-                  Text(
-                    "Welcome Back",
-                    style: TextStyle(color: Colors.white),
-                  ),
-                ],
-              )
-            ],
-          )
-        ]),
+        backgroundColor: Color(0xFFF4EDDB),
+        body: Container(),
       ),
     );
   }
